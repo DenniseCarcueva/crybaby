@@ -78,7 +78,7 @@ $.ajax({
 	url:"https://api.spotify.com/v1/search?q=artist:melanie%20martinez&type=album"
 	}).done(function(res){
 		$.ajax({
-			url:res.albums.items[0].href
+			url:res.albums.items[3].href
 		}).done(function(album){
 		console.log(res);
 		console.log(album);
@@ -101,8 +101,8 @@ $.ajax({
 
 				
 			
-						<img src="${res.albums.items[0].images[1].url}" alt="viray fccboi" />
-						<h2 align="left" class="major">${res.albums.items[0].name} </h2>`;
+						<img src="${res.albums.items[3].images[1].url}" alt="viray fccboi" />
+						<h2 align="left" class="major">${res.albums.items[3].name} </h2>`;
 		for(i=0;i<count; i++){
 			html = html + `<p align="justify">${album.tracks.items[i].name}</p>
 			<p align="justify"><audio controls><source src="${album.tracks.items[i].preview_url}" type="audio/ogg"></audio></p>`;
